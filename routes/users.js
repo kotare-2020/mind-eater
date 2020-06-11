@@ -16,7 +16,11 @@ const router = express.Router()
 // })
 
 router.get('/', (req, res) => {
-  res.render('./pages/index')
+  db.getPeopleData()
+    .then(people => res.render('index', people)
+    )
 })
+
+
 
 module.exports = router
