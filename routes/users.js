@@ -4,19 +4,22 @@ const db = require('../db')
 
 const router = express.Router()
 
-// Example get route, just setting up another below to test the hbs stuff
-// router.get('/', (req, res) => {
-//   db.getUsers()
-//     .then(users => {
-//       res.render('index', {users: users})
-//     })
-//     .catch(err => {
-//       res.status(500).send('DATABASE ERROR: ' + err.message)
-//     })
-// })
 
-router.get('/', (req, res) => {
-  res.render('./pages/index')
+
+router.get('/foodis/:id', (req, res)=>{
+
+  const id = req.params.id
+  
+  db.getRandomFoodId().then(id =>{
+    
+ res.render('foodis', {id: id})
+  
+  })
 })
+
+
+
+
+
 
 module.exports = router
