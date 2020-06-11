@@ -11,8 +11,9 @@ router.get('/foodis/:id', (req, res) => {
 
 router.get('/', (req, res) => {
   db.getPeopleData()
-    .then(people => res.render('./pages/landing-page', people)
-    )
+    .then(people => {
+      res.render('./pages/landing-page', {people})
+    })
 })
 
 module.exports = router
