@@ -53,7 +53,7 @@ exports.seed = function (knex) {
         { id: 20046, name: 'mashed potatoes' },
         { id: 20047, name: 'hash browns' },
         { id: 20048, name: 'McDonald’s fries but only when they’re fresh out of the fryer' },
-        { id: 20049, name: 'if coffee were solid you would much hard' },
+        { id: 20049, name: 'if coffee were a food it would be your favourite food (by far)' },
         { id: 20050, name: 'str8 caviar because you a baller' }
       ]);
     });
