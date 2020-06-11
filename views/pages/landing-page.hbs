@@ -1,0 +1,11 @@
+<!-- This is for the landing page -->
+
+<body>
+    <h1>Mind Eater</h1>
+    <h3>Minds we have eaten so far</h3>
+    <ul>
+        {{#each data}}
+        <li><a href="/{{id}}"></a>{{name}}</li>
+        {{/each}}
+    </ul>
+</body>
