@@ -17,7 +17,7 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
   db.getPeopleData()
-    .then(people => res.render('index', people)
+    .then(people => res.render('./pages/landing-page', people)
     )
 })
 
