@@ -1,0 +1,60 @@
+
+exports.seed = function (knex) {
+  // Deletes ALL existing entries
+  return knex('food').del()
+    .then(function () {
+      // Inserts seed entries
+      return knex('food').insert([
+        { id: 20001, name: 'just a whole tomato' },
+        { id: 20002, name: 'beans' },
+        { id: 20003, name: 'cheeseburgers' },
+        { id: 20004, name: 'burgers' },
+        { id: 20005, name: 'mochi' },
+        { id: 20006, name: 'broccoli' },
+        { id: 20007, name: 'pierogi' },
+        { id: 20008, name: 'som tam' },
+        { id: 20009, name: 'souvlaki' },
+        { id: 20010, name: 'kinder bueno mini' },
+        { id: 20011, name: 'vietnamese chicken pho' },
+        { id: 20012, name: 'pie' },
+        { id: 20013, name: 'ALL vietnamese food' },
+        { id: 20014, name: 'ALL malaysian food' },
+        { id: 20015, name: 'lasanga (hello there, Garfield)' },
+        { id: 20016, name: 'FAJITAS' },
+        { id: 20017, name: 'sorbet' },
+        { id: 20018, name: 'buttered popcorn' },
+        { id: 20019, name: 'peking duck' },
+        { id: 20020, name: 'sushi' },
+        { id: 20021, name: 'pizza' },
+        { id: 20022, name: 'pasta carbonara' },
+        { id: 20023, name: 'yakitori' },
+        { id: 20024, name: 'pad thai' },
+        { id: 20025, name: 'fondue' },
+        { id: 20026, name: 'wontons' },
+        { id: 20027, name: 'tortillas' },
+        { id: 20028, name: 'ice cream' },
+        { id: 20029, name: 'bao buns' },
+        { id: 20030, name: 'dumplings' },
+        { id: 20031, name: 'fried chicken' },
+        { id: 20032, name: 'spaghetti bolognese' },
+        { id: 20033, name: 'biryani' },
+        { id: 20034, name: 'burritos' },
+        { id: 20035, name: 'macaroni and cheese' },
+        { id: 20036, name: 'garlic bread' },
+        { id: 20037, name: 'a big bowl of ramen' },
+        { id: 20038, name: 'brains' },
+        { id: 20039, name: 'omelette' },
+        { id: 20040, name: 'chicken quesadilla' },
+        { id: 20041, name: 'subway cookies' },
+        { id: 20042, name: 'nachos' },
+        { id: 20043, name: 'protein shake' },
+        { id: 20044, name: 'avocado on toast' },
+        { id: 20045, name: 'poutine' },
+        { id: 20046, name: 'mashed potatoes' },
+        { id: 20047, name: 'hash browns' },
+        { id: 20048, name: 'McDonald’s fries but only when they’re fresh out of the fryer' },
+        { id: 20049, name: 'if coffee were solid you would much hard' },
+        { id: 20050, name: 'str8 caviar because you a baller' }
+      ]);
+    });
+};
