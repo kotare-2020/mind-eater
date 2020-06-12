@@ -9,21 +9,20 @@ router.get('/foodis/:id', (req, res) => {
   let pageData = {}
 
   db.getRandomFoodId()
-
-    .then(data => {
-
-      pageData.randomFood = data.name
-
-
-       db.getPeopleAndFavFood(id).then(data => {
+    .then(food => {
+      db.getPeopleAndFavFood(id)
+        .then(data => {
         console.log("heyywruywg", data)
         pageData.people_name = data.people_name
         pageData.food_name = data.food_name
+        pageData.randomFood = food.name
+        return pageData
       })
+      .then(() => {
+        console.log(pageData)
+        res.render('foodis', { pageData: pageData })
 
-    }).then(() => {
-      console.log(pageData)
-      res.render('foodis', { pageData: pageData })
+    })
     })
     .catch((err) => {
       console.log(err);
