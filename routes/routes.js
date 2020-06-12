@@ -15,8 +15,8 @@ router.get('/foodis/:id', (req, res) => {
       pageData.randomFood = data.name
 
 
-      db.getPeopleAndFavFood(id).then(data => {
-
+       db.getPeopleAndFavFood(id).then(data => {
+        console.log("heyywruywg", data)
         pageData.people_name = data.people_name
         pageData.food_name = data.food_name
       })
