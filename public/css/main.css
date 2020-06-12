@@ -13,3 +13,11 @@
 .lighttext {
   color: honeydew
 }
+
+#prediction {
+  color: green;
+}
+
+#actualfav {
+  color: red;
+}
