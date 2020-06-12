@@ -3,30 +3,34 @@
         <div class="row">
             <div class="column column-90 centretext lighttext">
                 <h1>I can read your mind, {{pageData.people_name}}</h1>
-                <h1>I see you like...</h1>
-                <h1 id="prediction">{{pageData.randomFood}}</h1>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h2>but you think you like...</h2>
-                <h2 id="actualfav">{{pageData.food_name}}</h2>
-                <br>
-
-                <br>
-
-                <br>
-
-                <br>
-
-                <br>
-
-
-                <button onclick="location.href='/'" type="button">Read other minds...</button>
+                <h1 class="inline">I see you like </h1><h1 class="inline" id="prediction"></h1>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h2 class="fade-in">but you think you like...</h2>
+                    <h2 class="fade-in" id="actualfav">{{pageData.food_name}}</h2>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button onclick="location.href='/'" type="button">Read other minds...</button>
             </div>
         </div>
     </div>
+
+    <script>
+        var typed = new Typed('#prediction', {
+            strings: ['...^50', '{{pageData.randomFood}}'],
+            typeSpeed: 100,
+            showCursor: false,
+            backSpeed: 50,
+            loop: false
+        })
+    </script>
+
 </body>
