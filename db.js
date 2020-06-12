@@ -31,7 +31,7 @@ function getPeopleData ( db = connection ) {
 function getPeopleAndFavFood(id, db = connection) {
   
   
-  return db('people').join('food', 'people.food_id','food.id').select('people.name AS people_name', 'food.name AS food_name').where('people.id', id).first()
+  return db('people').join('food', 'people.food_id','food.id').select('people.name AS people_name', 'food.name AS food_name', 'people.id AS peopleid').where('peopleid', id).first()
   
   //get people
   //join to foods
