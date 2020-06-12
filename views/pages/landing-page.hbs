@@ -1,11 +1,3 @@
-<!-- This is for the landing page -->
-{{!-- < <div class="row">
-    <div class="column">A</div>
-    <div class="column column-50 column-offset-25"></div>B
-    </div>
-    </div>
-
-    </div> --}}
     <body id='homebg'>
     <div class="container">
         <div class="row">
@@ -14,13 +6,10 @@
 
                 <h1>Mind || Eater</h1>
                 <h3>Minds we have eaten so far...</h3>
+                 {{#each people}}
+        <li><a href="/foodis/{{id}}">{{name}}</a></li>
+        {{/each}}
             </div>
         </div>
-    </div>
-    <ul>
-        {{#each data}}
-        <li><a href="/{{id}}"></a>{{name}}</li>
-        {{/each}}
-    </ul>
     </div>
     </body>
