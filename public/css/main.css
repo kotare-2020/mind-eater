@@ -1,3 +1,15 @@
-.container {
-  max-width: 1400px
+
+
+.centretext {
+  text-align: center;
+  margin-top: 80px;
+}
+
+#homebg {
+  background-image: url('../images/Telepathy.jpg');
+  background-size: 100% auto;
+}
+
+.lighttext {
+  color: honeydew
 }
