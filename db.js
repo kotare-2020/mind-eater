@@ -30,8 +30,8 @@ function getPeopleData ( db = connection ) {
 
 function getPeopleAndFavFood(id, db = connection) {
   
-  
-  return db('people').join('food', 'people.food_id','food.id').select('people.name AS people_name', 'food.name AS food_name', 'people.id AS peopleid').where('peopleid', id).first()
+  console.log(id, typeof id)
+  return db('people').join('food', 'people.food_id','food.id').select('people.name AS people_name', 'food.name AS food_name', 'people.id AS peopleid').where('peopleid', Number(id)).first()
   
   //get people
   //join to foods
