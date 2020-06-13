@@ -30,6 +30,11 @@ router.get('/foodis/:id', (req, res) => {
     })
 })
 
+//  function googleSearch (quest){
+//   let googlefind = quest + " recipes";
+//   window.open("http://www.google.com/search?hl=en&q=" + escape(googlefind));
+//  }
+
 
 
 

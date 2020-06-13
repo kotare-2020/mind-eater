@@ -18,6 +18,13 @@ function getRandomFoodId (db = connection) {
   
   // console.log(foodId);
   
+   function googleSearch (foodId){
+    let googlefind = foodId + " recipes";
+   
+    return window.open("http://www.google.com/search?hl=en&q=" + escape(googlefind));
+  
+  }
+  
    return db('food').where('id',foodId).first()
 
 }
@@ -32,8 +39,11 @@ function getPeopleAndFavFood(id, db = connection) {
   
   
   return db('people').join('food', 'people.food_id','food.id').select('people.name AS people_name', 'food.name AS food_name').where('people.id', id).first()
+
+  
   
   //get people
   //join to foods
   //where people id = id
 }
+
